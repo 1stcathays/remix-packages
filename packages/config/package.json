@@ -1,0 +1,23 @@
+{
+  "name": "@1stcathays/remix-config",
+  "version": "0.0.0",
+  "description": "Config extensions for Remix applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run esbuild && npm run types",
+    "clean": "rm -rf dist",
+    "esbuild": "../../build.js",
+    "types": "tsc --project tsconfig.types.json --emitDeclarationOnly --outDir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1st-Cathays/remix-packages/packages/config"
+  },
+  "keywords": [
+    "remix",
+    "react",
+    "dotenv"
+  ],
+  "author": "Ahmed Hussein"
+}

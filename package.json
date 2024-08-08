@@ -1,0 +1,41 @@
+{
+  "name": "root",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "lerna run build",
+    "build:force": "lerna run build --skip-nx-cache",
+    "lint": "run-p lint:*",
+    "lint:files": "eslint --output-file checkstyle.xml --format checkstyle .",
+    "lint:types": "tsc --noemit",
+    "lint:format": "prettier --check .",
+    "prepare": "husky install",
+    "prettier": "prettier --write .",
+    "release": "lerna publish --yes --no-commit-hooks",
+    "test": "vitest",
+    "test:unit": "vitest run --coverage --reporter=junit --outputFile=junit.xml"
+  },
+  "prettier": "@1stcathays/prettier-config",
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": "eslint --fix",
+    "*.{ts,tsx,js,jsx,md,json}": "prettier --write"
+  },
+  "devDependencies": {
+    "@1stcathays/eslint-config": "^0.1.0",
+    "@1stcathays/prettier-config": "^0.1.0",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@remix-run/node": "^2.10.3",
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@vitest/coverage-v8": "^2.0.3",
+    "esbuild": "^0.23.0",
+    "eslint": "^8.37.0",
+    "husky": "^9.1.1",
+    "lerna": "^8.1.6",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.3"
+  }
+}

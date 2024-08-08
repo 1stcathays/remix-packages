@@ -1,0 +1,39 @@
+{
+  "name": "@1stcathays/remix-auth",
+  "version": "0.0.0",
+  "description": "Authentication extension for Remix applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run esbuild && npm run types",
+    "clean": "rm -rf dist",
+    "esbuild": "../../build.js",
+    "types": "tsc --project tsconfig.types.json --emitDeclarationOnly --outDir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1st-Cathays/remix-packages/packages/auth"
+  },
+  "keywords": [
+    "remix",
+    "react",
+    "oauth2"
+  ],
+  "author": "Ahmed Hussein",
+  "dependencies": {
+    "@1stcathays/remix-config": "workspace:*",
+    "@lucia-auth/adapter-prisma": "^4.0.1",
+    "lucia": "^3.2.0",
+    "oslo": "^1.2.1"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.17.0"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^2.10.3"
+  },
+  "optionalDependencies": {
+    "@1stcathays/remix-logging": "workspace:*"
+  }
+}

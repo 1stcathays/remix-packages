@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*mock.ts"]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@1stcathays/remix-metrics",
+  "version": "0.0.0",
+  "description": "Prometheus metrics for Remix applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run esbuild && npm run types",
+    "clean": "rm -rf dist",
+    "esbuild": "../../build.js",
+    "types": "tsc --project tsconfig.types.json --emitDeclarationOnly --outDir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1st-Cathays/remix-packages/packages/metrics"
+  },
+  "keywords": [
+    "remix",
+    "react",
+    "web-vitals",
+    "metrics",
+    "prometheus"
+  ],
+  "author": "Ahmed Hussein",
+  "dependencies": {
+    "prom-client": "^14.2.0",
+    "web-vitals": "^3.5.2"
+  }
+}

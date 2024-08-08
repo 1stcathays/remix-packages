@@ -1,0 +1,30 @@
+{
+  "name": "@1stcathays/remix-utils",
+  "version": "0.0.0",
+  "description": "Utilities for Remix applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run esbuild && npm run types",
+    "clean": "rm -rf dist",
+    "esbuild": "../../build.js",
+    "types": "tsc --project tsconfig.types.json --emitDeclarationOnly --outDir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1st-Cathays/remix-packages/packages/utils"
+  },
+  "keywords": [
+    "remix",
+    "react",
+    "utils"
+  ],
+  "author": "Ahmed Hussein",
+  "optionalDependencies": {
+    "@1stcathays/remix-logging": "workspace:*"
+  },
+  "devDependencies": {
+    "@1stcathays/remix-logging": "workspace:*",
+    "msw": "^2.3.2"
+  }
+}

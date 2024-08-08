@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "npmClient": "pnpm",
+  "version": "0.0.0",
+  "command": {
+    "publish": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "message": "chore(release): publish %s [skip ci]",
+      "registry": "https://npm.pkg.github.com"
+    }
+  }
+}

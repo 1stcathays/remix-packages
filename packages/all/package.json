@@ -1,0 +1,35 @@
+{
+  "name": "@1stcathays/remix",
+  "version": "0.0.0",
+  "description": "Single wrapper package for re-export of all @1stcathays/remix-* packages",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run esbuild && npm run types",
+    "clean": "rm -rf dist",
+    "esbuild": "../../build.js",
+    "types": "tsc --project tsconfig.types.json --emitDeclarationOnly --outDir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1st-Cathays/remix-packages"
+  },
+  "keywords": [
+    "1stcathays",
+    "remix",
+    "react"
+  ],
+  "author": "Ahmed Hussein",
+  "dependencies": {
+    "@1stcathays/remix-auth": "workspace:*",
+    "@1stcathays/remix-cache": "workspace:*",
+    "@1stcathays/remix-config": "workspace:*",
+    "@1stcathays/remix-logging": "workspace:*",
+    "@1stcathays/remix-metrics": "workspace:*",
+    "@1stcathays/remix-session": "workspace:*",
+    "@1stcathays/remix-utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^2.10.3"
+  }
+}
