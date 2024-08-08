@@ -4,15 +4,15 @@
   "description": "Utilities for Remix applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": "https://github.com/1stcathays/remix-packages/packages/utils",
+  "publishConfig": {
+    "@1stcathays:registry": "https://npm.pkg.github.com/1stcathays"
+  },
   "scripts": {
     "build": "npm run clean && npm run esbuild && npm run types",
     "clean": "rm -rf dist",
     "esbuild": "../../build.js",
     "types": "tsc --project tsconfig.types.json --emitDeclarationOnly --outDir dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/1st-Cathays/remix-packages/packages/utils"
   },
   "keywords": [
     "remix",
