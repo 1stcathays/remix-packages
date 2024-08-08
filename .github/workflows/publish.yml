@@ -39,6 +39,9 @@ jobs:
         run: |
           pnpm set @1stcathays:registry=https://npm.pkg.github.com/1stcathays
           pnpm set "//npm.pkg.github.com/:_authToken=${{ secrets.CI_PAT }}"
+      
+      - name: Build packages
+        run: pnpm build
 
       - name: Version and publish
         env:
