@@ -21,7 +21,6 @@
   ],
   "author": "Ahmed Hussein",
   "dependencies": {
-    "@1stcathays/remix-auth": "workspace:*",
     "@1stcathays/remix-cache": "workspace:*",
     "@1stcathays/remix-config": "workspace:*",
     "@1stcathays/remix-logging": "workspace:*",

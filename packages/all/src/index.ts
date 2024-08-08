@@ -1,4 +1,3 @@
-export * from '@1stcathays/remix-auth';
 export * from '@1stcathays/remix-cache';
 export * from '@1stcathays/remix-config';
 export * from '@1stcathays/remix-logging';
